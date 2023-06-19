@@ -38,7 +38,7 @@ test_size = len(train_dataset) - train_size
 train_dataset, test_dataset = torch.utils.data.random_split(train_dataset, [train_size, test_size])
 
 train_data_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True,drop_last=True)
-test_data_loader = DataLoader(dataset=train_dataset,batch_size=batch_size,shuffle=True,drop_last=True)
+test_data_loader = DataLoader(dataset=test_dataset,batch_size=batch_size,shuffle=True,drop_last=True)
 
 net = rsnet34()
 net = net.cuda()
